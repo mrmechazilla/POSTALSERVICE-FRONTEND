@@ -2,24 +2,22 @@ import { Component } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
+  name: number;
+  position: string;
+  weight: string;
   symbol: string;
+  address: string;
 }
 
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 0.79, symbol: 'PREMIUM'},
-  {position: 2, name: 'Helium', weight: 0.55, symbol: 'STANDARD'},
-  {position: 3, name: 'Lithium', weight: 0.42, symbol: 'PREMIUM'},
-  {position: 4, name: 'Beryllium', weight: 0.97, symbol: 'PREMIUM'},
-  {position: 5, name: 'Boron', weight: 0.51, symbol: 'VIP'},
-  {position: 6, name: 'Carbon', weight: 0.65, symbol: 'STANDARD'},
-  {position: 7, name: 'Nitrogen', weight: 0.25, symbol: 'STANDARD'},
-  {position: 8, name: 'Oxygen', weight: 0.84, symbol: 'VIP'},
-  {position: 9, name: 'Fluorine', weight: 0.94, symbol: 'VIP'},
-  {position: 10, name: 'Neon', weight: 0.12, symbol: 'PREMIUM'},
+  {position: 'Mr. YOUSSEF', name: 50.00, weight: '12-05-2023', symbol: 'PREMIUM', address:'Tangier, Morocco'},
+  {position: 'Mr. SAMIH', name: 15.28, weight: '15-05-2023', symbol: 'STANDARD', address:'Mohammedia, Morocco'},
+  {position: 'Mr. AHMED', name: 58.02, weight: '29-05-2023', symbol: 'VIP', address:'Settat, Morocco'},
+  {position: 'Mr. AYMANE', name: 19.00, weight: '25-05-2023', symbol: 'STANDARD', address:'Ouajda, Morocco'},
+  {position: 'Miss. FAIZA', name: 8.00, weight: '20-05-2023', symbol: 'VIP', address:'Casablanca, Morocco'},
+  {position: 'Mr. HOUSSAM', name: 10.84, weight: '02-05-2023', symbol: 'VIP', address:'Rabat , Morocco'},
+  {position: 'Mr. LOKMANE', name: 24.02, weight: '09-05-2023', symbol: 'PREMIUM', address:'Marrakech, Morocco'},
 ];
 
 @Component({
@@ -28,7 +26,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./package-table.component.scss']
 })
 export class PackageTableComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'address'];
   dataSource = ELEMENT_DATA;
 
 }
