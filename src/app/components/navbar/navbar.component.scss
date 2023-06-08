@@ -1,0 +1,43 @@
+
+.spacer {
+    display: inline-block;
+    width: 16%;
+}
+
+.menu-link {
+    margin-right: 2%;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.menu-link:hover {
+    border-bottom: 3px solid #0070AD;
+}
+  
+.active-link {
+    border-bottom: 3px solid #0070AD;
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.mat-toolbar{
+    background-color: #212428;
+}
+
+.mat-icon{
+    color: #FFFFFF;;
+}
+
+.example-icon{
+    color: #FFFFFF;
+}

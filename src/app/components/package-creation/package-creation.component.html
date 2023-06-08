@@ -1,0 +1,168 @@
+<div class="small-box">
+  <p style="text-align:center; color:white; margin-top:-9px;">Send A Package</p>
+</div>
+
+<div class="big-box">
+
+  <mat-horizontal-stepper>
+
+    <!-- first stepper -->
+
+    <mat-step label="Client Information">
+      <p>Client Information Details</p>
+      <div class="form-fields">
+        <mat-form-field floatLabel="always">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First Name" required class="custom-input">
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" required class="custom-input">
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Card ID</mat-label>
+          <input matInput placeholder="Card ID" required class="custom-input">
+        </mat-form-field>
+
+      </div>
+
+      <div class="form-fields">
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="Address" required class="custom-input">
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Date Of Birth</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Other</mat-label>
+          <input matInput placeholder="Other" required class="custom-input">
+        </mat-form-field>
+
+      </div>
+
+      <div class="step-buttons">
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+
+
+
+
+
+    <!-- second stepper -->
+
+
+
+    <mat-step label="Package Information">
+      <p>Package Information Details</p>
+
+      <div class="form-fields">
+        <mat-form-field floatLabel="always">
+          <mat-label>Package Weight</mat-label>
+          <input matInput placeholder="Package Weight" required class="custom-input">
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Package Height</mat-label>
+          <input matInput placeholder="Package Height" required class="custom-input">
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Package Width</mat-label>
+          <input matInput placeholder="Package Width" required class="custom-input">
+        </mat-form-field>
+
+      </div>
+
+      <div class="form-fields">
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Package Price</mat-label>
+          <input matInput placeholder="Package Price" required class="custom-input">
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Shipping Tier</mat-label>
+          <mat-select placeholder="Shipping Tier" required>
+            <mat-option *ngFor="let shipping of shippings" [value]="shipping.value">
+              {{shipping.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+        <mat-form-field floatLabel="always">
+          <mat-label>Shipping Address</mat-label>
+          <input matInput placeholder="Shipping Address" required class="custom-input">
+        </mat-form-field>
+      </div>
+      <div class="step-buttons">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+
+    <!-- third stepper -->
+
+    <mat-step label="Confirm Extraction">
+      <p>Confirm Extraction Details</p>
+
+      <div class="row justify-content-around">
+        <div style="height: 135px; width:300px; border:1px solid black; padding: 0px;">
+          <table class="table ">
+            <thead>
+              <tr>
+                <th scope="col" style="background-color:#0070AD; color: white; font-family:'Montserrat', sans-serif;">Client Information</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="col" style="font-family:'Montserrat', sans-serif;"> First Name: <br> Last Name: <br> Card ID: <br> Departure Address: </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="height: 135px; width:300px; border:1px solid black; padding: 0px;">
+          <table class="table ">
+            <thead>
+              <tr>
+                <th scope="col" style="background-color:#0070AD; color: white; font-family:'Montserrat', sans-serif;" >Package Information</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="col" style="font-family:'Montserrat', sans-serif;"> Package Weight: <br> Package Price: <br> Shipping Tier: <br> Shipping Address: </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+
+      
+
+
+      <div class="step-buttons">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button>Submit</button>
+      </div>
+    </mat-step>
+
+  </mat-horizontal-stepper>
+
+
+
+</div>
