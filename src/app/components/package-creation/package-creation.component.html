@@ -1,6 +1,6 @@
-<!-- <div class="small-box">
+<div class="small-box">
   <p style="text-align:center; color:white; margin-top:-9px;">Send A Package</p>
-</div> -->
+</div>
 
 <div class="big-box">
 
@@ -13,17 +13,17 @@
       <div class="form-fields">
         <mat-form-field floatLabel="always">
           <mat-label>First Name</mat-label>
-          <input matInput placeholder="First Name" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
 
         <mat-form-field floatLabel="always">
           <mat-label>Last Name</mat-label>
-          <input matInput placeholder="Last Name" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
 
         <mat-form-field floatLabel="always">
           <mat-label>Card ID</mat-label>
-          <input matInput placeholder="Card ID" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
 
       </div>
@@ -32,19 +32,19 @@
 
         <mat-form-field floatLabel="always">
           <mat-label>Address</mat-label>
-          <input matInput placeholder="Address" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
 
         <mat-form-field floatLabel="always">
           <mat-label>Date Of Birth</mat-label>
           <input matInput [matDatepicker]="picker">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker-toggle matSuffix [for]="picker" style="color: #0070AD;"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
         <mat-form-field floatLabel="always">
           <mat-label>Other</mat-label>
-          <input matInput placeholder="Other" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
 
       </div>
@@ -69,17 +69,17 @@
       <div class="form-fields">
         <mat-form-field floatLabel="always">
           <mat-label>Package Weight</mat-label>
-          <input matInput placeholder="Package Weight" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
 
         <mat-form-field floatLabel="always">
           <mat-label>Package Height</mat-label>
-          <input matInput placeholder="Package Height" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
 
         <mat-form-field floatLabel="always">
           <mat-label>Package Width</mat-label>
-          <input matInput placeholder="Package Width" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
 
       </div>
@@ -88,12 +88,12 @@
 
         <mat-form-field floatLabel="always">
           <mat-label>Package Price</mat-label>
-          <input matInput placeholder="Package Price" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
 
         <mat-form-field floatLabel="always">
           <mat-label>Shipping Tier</mat-label>
-          <mat-select placeholder="Shipping Tier" required>
+          <mat-select required>
             <mat-option *ngFor="let shipping of shippings" [value]="shipping.value">
               {{shipping.viewValue}}
             </mat-option>
@@ -103,7 +103,7 @@
 
         <mat-form-field floatLabel="always">
           <mat-label>Shipping Address</mat-label>
-          <input matInput placeholder="Shipping Address" required class="custom-input">
+          <input matInput required class="custom-input">
         </mat-form-field>
       </div>
       <div class="step-buttons">
@@ -158,6 +158,7 @@
       <div class="step-buttons" style="padding-top:20px;">
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button>Submit</button>
+        <button mat-button>Download</button>
       </div>
     </mat-step>
 

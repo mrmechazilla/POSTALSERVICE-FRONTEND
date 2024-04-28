@@ -1,45 +1,52 @@
 <app-search></app-search>
 
 <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource">
+  <table matSort mat-table [dataSource]="dataSource">
 
     <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> Client Full Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    <ng-container matColumnDef="client_name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Client Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.client_name}} </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Package Price </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <ng-container matColumnDef="package_price">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Package Price </th>
+      <td mat-cell *matCellDef="let element"> {{element.package_price}} </td>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef> Extraction Date </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    <ng-container matColumnDef="extraction_date">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Extraction Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.extraction_date | date:"yyyy-MM-dd"}} </td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef> Shipping Tier </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    <ng-container matColumnDef="shipping_tier">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Shipping Tier </th>
+      <td mat-cell *matCellDef="let element"> {{element.shipping_tier}} </td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="address">
-      <th mat-header-cell *matHeaderCellDef> Shipping Address </th>
-      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    <ng-container matColumnDef="shipping_address">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Shipping Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.shipping_address}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions 	
+        <mat-icon style="margin-left: 10px;">control_point</mat-icon> </th>
+      <td mat-cell *matCellDef="let row"> 
+          <mat-icon style="color:red; cursor: pointer;">delete</mat-icon>
+          <mat-icon style="cursor: pointer;">edit</mat-icon>
+          <mat-icon style="cursor: pointer;">download</mat-icon>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                 showFirstLastButtons
-                 aria-label="Select page of periodic elements"
-                  style="height: 55px; border: 0.5px solid; border-color:gray;">   <!--background-color: #0070AD;  -->
-  </mat-paginator>
+  <mat-paginator [pageSizeOptions]="[5, 10, 100, 500, 1200]" style="color: #fff; background-color: #0070ad;" aria-label="Select page of users"></mat-paginator>
+
 </div>

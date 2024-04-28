@@ -18,7 +18,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsComponent } from './components/components.component';
-import { DtosComponent } from './dtos/dtos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PackageCreationComponent } from './components/package-creation/package-creation.component';
 import { PackageTableComponent } from './components/package-table/package-table.component';
@@ -33,10 +32,10 @@ import { RegisterComponent } from './authentication/register/register.component'
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/package-creation', pathMatch: 'full' },
-  { path: 'package-creation', component: PackageCreationComponent },
-  { path: 'package-table', component: PackageTableComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: '', redirectTo: 'laposte/package-creation', pathMatch: 'full' },
+  { path: 'laposte/package-creation', component: PackageCreationComponent },
+  { path: 'laposte/package-table', component: PackageTableComponent },
+  { path: 'laposte/dashboard', component: DashboardComponent }
 ];
 
 
@@ -44,7 +43,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ComponentsComponent,
-    DtosComponent,
     NavbarComponent,
     PackageCreationComponent,
     PackageTableComponent,

@@ -5,10 +5,10 @@ import { PackageTableComponent } from './components/package-table/package-table.
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/package-creation', pathMatch: 'full' },
-  { path: 'package-creation', component: PackageCreationComponent },
-  { path: 'packages-table', component: PackageTableComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: 'laposte/package-creation', pathMatch: 'full' },
+  { path: 'laposte/package-creation', component: PackageCreationComponent },
+  { path: 'laposte/packages-table', component: PackageTableComponent },
+  { path: 'laposte/dashboard', component: DashboardComponent },
   // Add additional routes here if needed
   // { path: 'other-path', component: OtherComponent },
 ];

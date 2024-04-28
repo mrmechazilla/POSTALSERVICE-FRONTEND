@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import {MatTableModule} from '@angular/material/table';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 
 export interface PeriodicElement {
   name: number;
@@ -8,25 +10,39 @@ export interface PeriodicElement {
   symbol: string;
   address: string;
 }
-
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 'Mr. YOUSSEF', name: 50.00, weight: '12-05-2023', symbol: 'PREMIUM', address:'Tangier, Morocco'},
-  {position: 'Mr. SAMIH', name: 15.28, weight: '15-05-2023', symbol: 'STANDARD', address:'Mohammedia, Morocco'},
-  {position: 'Mr. AHMED', name: 58.02, weight: '29-05-2023', symbol: 'VIP', address:'Settat, Morocco'},
-  {position: 'Mr. AYMANE', name: 19.00, weight: '25-05-2023', symbol: 'STANDARD', address:'Ouajda, Morocco'},
-  {position: 'Miss. FAIZA', name: 8.00, weight: '20-05-2023', symbol: 'VIP', address:'Casablanca, Morocco'},
-  {position: 'Mr. HOUSSAM', name: 10.84, weight: '02-05-2023', symbol: 'VIP', address:'Rabat , Morocco'},
-  {position: 'Mr. LOKMANE', name: 24.02, weight: '09-05-2023', symbol: 'PREMIUM', address:'Marrakech, Morocco'},
-];
-
 @Component({
   selector: 'app-package-table',
   templateUrl: './package-table.component.html',
   styleUrls: ['./package-table.component.scss']
 })
-export class PackageTableComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'address'];
-  dataSource = ELEMENT_DATA;
+export class PackageTableComponent implements OnInit, AfterViewInit{
+  public packages:any;
+  public dataSource: any;
+  public displayedColumns = ['client_name', 'package_price', 'extraction_date', 'shipping_tier', 'shipping_address', 'actions'];
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(){}
+
+  ngOnInit(): void {
+    this.packages = [];
+    for(let i=1; i<100; i++){
+      this.packages.push(
+        {
+          client_name: Math.random().toString(20),
+          package_price: i*240,
+          extraction_date: new Date().toISOString(),
+          shipping_tier: Math.random().toString(20),
+          shipping_address: Math.random().toString(20)
+        }
+      )
+    }
+    this.dataSource = new MatTableDataSource(this.packages);
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
 
 }
