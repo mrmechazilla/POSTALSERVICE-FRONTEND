@@ -3,7 +3,7 @@
   /* Adjust the width as needed */
   max-width: 2600px;
   /* Set a maximum width if desired */
-  height: 65%;
+  height: 50%;
   /* Adjust the height as per your requirements */
   border: 2px solid #0070AD;
   /* Add the border property */
@@ -71,7 +71,7 @@
 .step-buttons {
   display: flex;
   justify-content: flex-end;
-  margin-top: -20px;
+  margin-top: -80px;
 }
 
 .step-buttons button {
@@ -84,7 +84,7 @@
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 40px !important;
+  //border-radius: 40px !important;
 }
 
 .step-buttons button:first-child {
