@@ -18,3 +18,18 @@ mat-form-field {
     border-radius: 0px !important;
     border-color: #0070ad !important;
 }
+
+
+::ng-deep .mat-mdc-icon-button svg {
+    vertical-align: baseline;
+    fill: #fff;
+}
+
+::ng-deep  .mat-mdc-icon-button[disabled] .mat-mdc-paginator-icon {
+    fill: #ffffff;
+}
+
+::ng-deep *, ::after, ::before {
+    box-sizing: border-box;
+    color: #fff;
+}
