@@ -1,8 +1,7 @@
 import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import { SearchComponent } from '../search/search.component';
+import {MatTableDataSource} from '@angular/material/table';
 
 export interface PeriodicElement {
   name: number;

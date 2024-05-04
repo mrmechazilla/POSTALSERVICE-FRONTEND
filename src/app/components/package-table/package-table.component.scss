@@ -56,7 +56,7 @@ table.mat-mdc-table {
     border-color: black;
 }
 
-// colors for the checkbox
+/* // colors for the checkbox
 ::ng-deep  .mat-mdc-checkbox.mat-accent {
     --mdc-checkbox-selected-checkmark-color: #fff;
     --mdc-checkbox-selected-focus-icon-color: #0070ad;
@@ -69,19 +69,13 @@ table.mat-mdc-table {
     /* --mdc-checkbox-disabled-unselected-icon-color: rgba(0, 0, 0, 0.38); */
     /* --mdc-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.54); */
     /* --mdc-checkbox-unselected-pressed-icon-color: rgba(0, 0, 0, 0.54); */
-}
-
+//}
+ 
 ::ng-deep .mat-mdc-paginator .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
     padding-top: 10px;
     padding-bottom: 8px;
 }
-/* 
-::ng-deep .mat-mdc-select-trigger.mat-mdc-select-value {
-    color: #ffffff;
- }
- 
-::ng-deep .mat-mdc-select-arrow {
-   color: #fff;
- }
-  */
 
+::ng-deep .mat-mdc-paginator.mat-mdc-select-value, .mat-mdc-paginator.mat-mdc-select-arrow  {
+    color: #ffffff;
+}
