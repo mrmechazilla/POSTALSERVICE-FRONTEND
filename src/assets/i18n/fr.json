@@ -1,0 +1,78 @@
+{
+  "NAVBAR":{
+      "SEND_PACKAGE":"SEND PACKAGE",
+      "PACKAGE_LIST":"PACKAGE LIST",
+      "DASHBOARD":"DASHBOARD",
+      "SIGN_OUT":"Sign Out"
+  },
+  "SEND_PACKAGE": {
+      "TITLE": "Send A New Package",
+      "STEP_1": {
+          "CLIENT_INFORMATION": "Client Information",
+          "FIRST_NAME": "First Name",
+          "LAST_NAME": "Last Name",
+          "CARD_ID": "Crad ID",
+          "DEPARTURE_ADDRESS": "Departure Address",
+          "DATE_OF_BIRTH": "Date Of Birth",
+          "DESCRIPTION": "Description"
+      },
+      "STEP_2": {
+          "PACKAGE_INFORMATION": "Package Information",
+          "PACKAGE_WEIGHT": "Package Weight",
+          "PACKAGE_HEIGHT": "Package Height",
+          "PACKAGE_WIDTH": "Package Width",
+          "PACKAGE_PRICE": "Package Price",
+          "SHIPPING_TIER": "Shipping Tier",
+          "SHIPPING_ADDRESS": "Shipping Address"
+      },
+      "STEP_3": {
+          "CONFIRM_EXTRACTION": "Confirm Extraction",
+          "FIRST_NAME": "First Name",
+          "LAST_NAME": "Last Name",
+          "CARD_ID": "Crad ID",
+          "DEPARTURE_ADDRESS": "Departure Address",
+          "PACKAGE_WEIGHT": "Package Weight",
+          "PACKAGE_PRICE": "Package Price",
+          "SHIPPING_TIER": "Shipping Tier",
+          "SHIPPING_ADDRESS": "Shipping Address",
+          "SUCCESS_MESSAGE": "Package Sent successfully."
+      }
+  },
+  "PACKAGE_LIST": {
+      "SEARCH": "Search by Keyword",
+      "TABLE": {
+          "CLIENT_NAME": "Client Name",
+          "PACKAGE_PRICE": "Package Price",
+          "EXTRACTION_DATE": "Extraction Date",
+          "SHIPPING_TIER": "Shipping Tier",
+          "SHIPPING_ADDRESS": "Shipping Address",
+          "ACTIONS": "Actions",
+          "CURRENCY": "$"
+      },
+      "ACTIONS": {
+          "DELETE": {
+              "CONFIRMATION_QUESTION": "Are you sure you want to delete this package?",
+              "YES": "Yes",
+              "CANCEL": "Cancel"
+          },
+          "DETAILS": {
+              "TITLE": "package details",
+              "CLIENT_INFORMATION": "Client Information",
+              "FIRST_NAME": "First Name",
+              "LAST_NAME": "Last Name",
+              "CARD_ID": "Crad ID",
+              "EXTRACTION_DATE": "Extraction Date",
+              "PACKAGE_INFORMATION": "Package Information",
+              "PACKAGE_ID": "Package ID",
+              "PACKAGE_WEIGHT": "Package Weight",
+              "PACKAGE_PRICE": "Package Price",
+              "SHIPPING_TIER": "Shipping Tier",
+              "SHIPPING_ADDRESS": "Shipping Address",
+              "DOWNLOAD_INVOICE": "Download Invoice"
+          }
+      }
+  },
+  "DASHBOARD": {
+      "TITLE": "Application Dashboard"
+  }
+}

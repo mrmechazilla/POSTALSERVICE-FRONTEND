@@ -26,10 +26,9 @@ import { SearchComponent } from './components/search/search.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AuthenticationComponent } from './authentication/authentication.component';
-import { LoginComponent } from './authentication/login/login.component';
-import { RegisterComponent } from './authentication/register/register.component';
-
+import {HttpClient} from '@angular/common/http';
+//import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+//import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 
 const appRoutes: Routes = [
@@ -38,7 +37,6 @@ const appRoutes: Routes = [
   { path: 'laposte/package-table', component: PackageTableComponent },
   { path: 'laposte/dashboard', component: DashboardComponent }
 ];
-
 
 @NgModule({
   declarations: [
@@ -50,9 +48,6 @@ const appRoutes: Routes = [
     SearchComponent,
     FilterComponent,
     DashboardComponent,
-    AuthenticationComponent,
-    LoginComponent,
-    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +66,14 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatExpansionModule,
     MatPaginatorModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    //TranslateModule.forRoot({
+      //loader: {
+        //provide: TranslateLoader,
+        //useFactory: (http: HttpClient) => {return new TranslateHttpLoader(http, './assets/i18n/', '.json');},
+        //deps: [HttpClient]
+      //}
+    //})
   ],
   providers: [],
   bootstrap: [AppComponent]

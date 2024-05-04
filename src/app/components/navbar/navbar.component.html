@@ -7,9 +7,9 @@
     <span class="spacer"></span>
     <span class="spacer"></span>
   
-    <a routerLink="laposte/package-creation" routerLinkActive="active-link" class="menu-link"> SEND PACKAGE</a>
-    <a routerLink="laposte/package-table" routerLinkActive="active-link" class="menu-link"> PACKAGE TABLE</a>
-    <a routerLink="laposte/dashboard" routerLinkActive="active-link" class="menu-link"> DASHBOARD </a>
+    <a routerLink="laposte/package-creation" routerLinkActive="active-link" class="menu-link"> SEND PACKAGE </a>
+    <a routerLink="laposte/package-table" routerLinkActive="active-link" class="menu-link"> PACKAGE LIST </a>
+    <a routerLink="laposte/dashboard" routerLinkActive="active-link" class="menu-link" >  DASHBOARD  </a>
     
     <span class="spacer"></span>
     <span class="spacer"></span>
@@ -20,6 +20,12 @@
     <span>
         <img src="assets\images\user.svg">
     </span> -->
+
+    <select (change)="selectLang($event)" style="font-size: 15px; font-weight: bold; text-transform: uppercase; background-color: transparent; color: #ffffff; outline: none; border: none; margin-left: 10px; padding-right: 5px; font-family: 'Montserrat', sans-serif; cursor: pointer;">
+        <option style="background-color: transparent; font-size: 15px; font-weight: bold; color: #0070AD;" *ngFor="let item of supportedLanguages"> {{item}} </option>
+    </select>  
+
+
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
     </button>
