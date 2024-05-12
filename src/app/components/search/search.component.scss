@@ -22,14 +22,14 @@ mat-form-field {
 
 ::ng-deep .mat-mdc-icon-button svg {
     vertical-align: baseline;
-    fill: #fff;
+    //fill: #fff;
 }
 
 ::ng-deep  .mat-mdc-icon-button[disabled] .mat-mdc-paginator-icon {
-    fill: #ffffff;
+    //fill: #ffffff;
 }
 
 ::ng-deep *, ::after, ::before {
     box-sizing: border-box;
-    color: #fff;
+    //color: #fff;
 }

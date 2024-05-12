@@ -1,7 +1,10 @@
+import { DatePipe } from '@angular/common';
 import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { DomSanitizer } from '@angular/platform-browser';
+import { DialogService } from 'src/app/services/dialog.service';
 
 export interface PeriodicElement {
   name: number;
@@ -23,7 +26,7 @@ export class PackageTableComponent implements OnInit, AfterViewInit{
   @ViewChild(MatSort) sort!: MatSort;
 
 
-  constructor(){}
+  constructor(private dialogService: DialogService){}
 
   ngOnInit(): void {
     this.packages = [];
@@ -32,7 +35,7 @@ export class PackageTableComponent implements OnInit, AfterViewInit{
         {
           client_name: Math.random().toString(20),
           package_price: i*240,
-          extraction_date: new Date().toISOString(),
+          extraction_date: new Date().toString(),
           shipping_tier: Math.random().toString(20),
           shipping_address: Math.random().toString(20)
         }
@@ -40,7 +43,6 @@ export class PackageTableComponent implements OnInit, AfterViewInit{
     }
     this.dataSource = new MatTableDataSource(this.packages);
   }
-
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
@@ -57,6 +59,16 @@ export class PackageTableComponent implements OnInit, AfterViewInit{
   filterTable(event: Event){
     let value = (event.target as HTMLInputElement).value;
     this.dataSource.filter = value;
+  }
+
+  openDetails(){
+    this.dialogService.openConfirmDialog('').afterClosed().subscribe((res: boolean) => {
+    });
+  }
+
+  openConfirmation(){
+    this.dialogService.openConfirmDeletion('').afterClosed().subscribe((res: boolean) => {
+    });
   }
 
 }

@@ -14,7 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +27,9 @@ import { FilterComponent } from './components/filter/filter.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {HttpClient} from '@angular/common/http';
+import { DatePipe } from '@angular/common';
+import { PackageDetailsComponent } from './components/dialogs/package-details/package-details.component';
+import { ConfirmDeletionComponent } from './components/dialogs/confirm-deletion/confirm-deletion.component';
 //import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 //import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
@@ -48,6 +51,8 @@ const appRoutes: Routes = [
     SearchComponent,
     FilterComponent,
     DashboardComponent,
+    PackageDetailsComponent,
+    ConfirmDeletionComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +71,7 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatExpansionModule,
     MatPaginatorModule,
+    MatDialogModule,
     RouterModule.forRoot(appRoutes),
     //TranslateModule.forRoot({
       //loader: {
@@ -75,7 +81,7 @@ const appRoutes: Routes = [
       //}
     //})
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

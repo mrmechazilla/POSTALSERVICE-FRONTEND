@@ -1,6 +1,6 @@
 <app-search></app-search>
 
-<div class="mat-elevation-z8" >
+<div class="mat-elevation-z8">
   <table matSort mat-table [dataSource]="dataSource">
 
     <!-- Position Column -->
@@ -34,11 +34,12 @@
     </ng-container>
 
     <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions 	
-        <mat-icon style="margin-left: 10px;">control_point</mat-icon> </th>
-      <td mat-cell *matCellDef="let row" style="display: flex; align-items: center; justify-content: center;">
-          <mat-icon style="color:red; cursor: pointer;" (click)="deleteRecord(row)">delete</mat-icon>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>	
+        <!-- <mat-icon style="margin-left: 10px;">control_point</mat-icon>  -->
+      <td mat-cell *matCellDef="let row">
+          <mat-icon style="color:red; cursor: pointer;" (click)="openConfirmation()">delete</mat-icon>
           <mat-icon style="cursor: pointer;">edit</mat-icon>
+          <mat-icon style="cursor: pointer;" (click)="openDetails()">description</mat-icon>
           <!-- <mat-checkbox ></mat-checkbox> -->
       </td>
     </ng-container>
