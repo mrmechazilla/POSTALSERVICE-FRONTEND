@@ -1,7 +1,7 @@
 {
   "NAVBAR":{
-      "SEND_PACKAGE":"SEND PACKAGE",
-      "PACKAGE_LIST":"PACKAGE LIST",
+      "SEND_PACKAGE":"ENVOYER PLI",
+      "PACKAGE_LIST":"LIST PLIS",
       "DASHBOARD":"DASHBOARD",
       "SIGN_OUT":"Sign Out"
   },

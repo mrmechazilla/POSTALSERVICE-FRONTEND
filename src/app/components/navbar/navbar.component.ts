@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,22 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent{
-  supportedLanguages = ['en', 'fr', 'ar'];
+  supportedLanguages: string[] = ['en', 'fr', 'ar'];
 
-  /* constructor(public translateService: TranslateService, private languageService: LanguageService){
-    this.translateService.addLangs(this.supportedLanguages);
-    this.translateService.setDefaultLang('en');
-    
-    const storedLanguage = this.languageService.getLanguage();
-    const browserLanguage = this.translateService.getBrowserLang() || 'en';
-    const selectedLanguage = storedLanguage || browserLanguage;
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(this.supportedLanguages);
+    this.translate.setDefaultLang('en');
 
-    this.translateService.use(selectedLanguage);
+    const browserLang = this.translate.getBrowserLang() || 'en';
+    this.translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
   }
- */
-  selectLang(event: Event){
-    //const lang = (event.target as HTMLInputElement).value;
-    //this.translateService.use(lang);
-    //this.languageService.setLanguage(lang);
+
+ 
+  selectLang(event: Event) {
+    const target = event.target as HTMLSelectElement;
+    const language = target.value;
+    this.translate.use(language);
   }
 }
