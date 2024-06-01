@@ -1,26 +1,30 @@
-import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component, OnInit } from '@angular/core';
+import { LanguageService } from 'src/app/services/language.service';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent{
+export class NavbarComponent implements OnInit{
   supportedLanguages: string[] = ['en', 'fr', 'ar'];
+  currentLanguage!: string;
+  darkMode = true;
 
-  constructor(private translate: TranslateService) {
-    this.translate.addLangs(this.supportedLanguages);
-    this.translate.setDefaultLang('en');
+  constructor(private languageService: LanguageService, private themeService: ThemeService){}
 
-    const browserLang = this.translate.getBrowserLang() || 'en';
-    this.translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+  ngOnInit() {
+    this.currentLanguage = this.languageService.getCurrentLanguage();
+    this.darkMode = this.themeService.isDarkMode();
   }
 
- 
-  selectLang(event: Event) {
-    const target = event.target as HTMLSelectElement;
-    const language = target.value;
-    this.translate.use(language);
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
+    this.darkMode = this.themeService.isDarkMode();
+  }
+
+  selectLang(event: any) {
+    this.languageService.setLanguage(event.target.value);
   }
 }

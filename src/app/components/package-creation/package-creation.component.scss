@@ -1,36 +1,27 @@
 .big-box {
   width: 95%;
-  /* Adjust the width as needed */
   max-width: 2600px;
-  /* Set a maximum width if desired */
   height: 50%;
-  /* Adjust the height as per your requirements */
   border: 2px solid #0070AD;
-  /* Add the border property */
   position: relative;
   margin: -32px auto;
-  /* this is to add space between the navbar and the box */
-  // -32
   padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .small-box {
   width: 95%;
-  /* Adjust the width as needed */
   max-width: 2600px;
-  /* Set a maximum width if desired */
   height: 2px;
   border: 2px solid #0070AD;
-  /* Add the border property */
   position: relative;
   margin: 30px auto;
-  /* this is to add space between the navbar and the box */
   padding: 20px;
   background-color: #0070AD;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
-
 
 ::ng-deep .mat-step-header .mat-step-icon {
   background-color: #0070AD;
@@ -108,4 +99,73 @@
 // Disable header navigation for the stepper
 ::ng-deep .mat-horizontal-stepper-header{
   pointer-events: none !important;
+}
+
+
+//::ng-deep .mat-mdc-option {
+  //min-height: 36px !important;
+//}
+
+::ng-deep .mat-step-header {
+  background-color: var(--mat-stepper-header-background) !important;
+  color: var(--mat-stepper-header-color) !important;
+}
+
+::ng-deep .mat-horizontal-content-container {
+  background-color: var(--mat-stepper-content-background) !important;
+  color: var(--mat-stepper-content-color) !important;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper .mdc-text-field {
+  border-color: var(--input-border-color) !important;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper .mdc-text-field input {
+  color: var(--text-color) !important;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--floating-label-color) !important;
+}
+
+::ng-deep .mat-mdc-option .mdc-list-item__primary-text {
+  background-color: var(--mat-option-background-color) !important;
+  color: var(--option-text-color) !important;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: var(--filled-input-background-color) !important;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: var(--input-text-color) !important;
+}
+
+.mat-form-field {
+  color: var(--text-color);
+}
+
+::ng-deep .cdk-overlay-pane:not(.mat-mdc-select-panel-above) .mdc-menu-surface.mat-mdc-select-panel {
+  background-color: var(--select-panel-background-color) !important;
+  color: var(--select-panel-text-color) !important;
+}
+
+::ng-deep .mat-mdc-option.mat-active {
+  color: var(--select-selected-item-color) !important;
+}
+
+::ng-deep .mat-mdc-select-value {
+  color: var(--select-value-color) !important;
+}
+
+::ng-deep .mat-horizontal-stepper-wrapper {
+  background-color: var(--stepper-wrapper-background-color) !important;
+}
+
+.mat-step-header .mat-step-label.mat-step-label-active {
+  color: var(--active-step-label-color) !important;
+}
+
+.mat-stepper-horizontal-line {
+  border-color: var(--horizontal-line-color) !important;
 }

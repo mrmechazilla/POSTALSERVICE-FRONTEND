@@ -11,6 +11,7 @@ import { MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule} from '@angular/material/core';
 import { MatTableModule} from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatExpansionModule} from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCheckboxModule} from '@angular/material/checkbox';
@@ -32,6 +33,9 @@ import { PackageDetailsComponent } from './components/dialogs/package-details/pa
 import { ConfirmDeletionComponent } from './components/dialogs/confirm-deletion/confirm-deletion.component';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { ThemeService } from './services/theme.service';
+import { FormsModule } from '@angular/forms';
+//import { PostalComponent, PostalModule } from 'postal';
 
 
 const appRoutes: Routes = [
@@ -69,10 +73,13 @@ const appRoutes: Routes = [
     MatTableModule,
     MatCheckboxModule,
     MatSelectModule,
+    MatSlideToggleModule,
     MatExpansionModule,
     MatPaginatorModule,
     MatDialogModule,
+    FormsModule,
     HttpClientModule,
+    //PostalModule,
     RouterModule.forRoot(appRoutes),
     TranslateModule.forRoot({
       loader: {
@@ -82,7 +89,7 @@ const appRoutes: Routes = [
       }
     })
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

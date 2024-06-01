@@ -41,3 +41,31 @@
 .example-icon{
     color: #FFFFFF;
 }
+
+.select-language{
+    font-size: 15px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    background-color: transparent; 
+    color: #ffffff; 
+    outline: none; 
+    border: none; 
+    margin-left: 10px; 
+    margin-right: 10px;
+    padding-right: 5px; 
+    font-family: 'Montserrat', sans-serif; 
+    cursor: pointer;
+}
+
+::ng-deep .mat-mdc-slide-toggle.mat-accent {
+    --mdc-switch-selected-handle-color: #0070ad !important;
+    --mdc-switch-selected-track-color: #fff !important;
+    --mdc-switch-selected-hover-track-color: #fff !important;
+    --mdc-switch-selected-hover-handle-color: #0070ad !important;
+    --mdc-switch-selected-pressed-track-color: #fff !important;
+    --mdc-switch-selected-pressed-handle-color: #fff !important;
+    --mdc-switch-selected-hover-state-layer-color: #fff !important;
+    --mdc-switch-selected-pressed-state-layer-color: #fff !important;
+    --mdc-switch-selected-focus-handle-color: #0070ad !important;
+    --mdc-switch-selected-focus-state-layer-color: #fff !important;
+}    

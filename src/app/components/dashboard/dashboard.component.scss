@@ -15,3 +15,12 @@
     left: 16px;
     padding: 0px 6px;
 }
+
+.dashboard {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+.big-box .title-div {
+    background-color: var(--title-div-color);
+}
