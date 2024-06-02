@@ -7,7 +7,7 @@ import { ThemeService } from './services/theme.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  darkMode = false;
+  darkMode = true;
 
   constructor(private themeService: ThemeService) {}
 

@@ -17,39 +17,47 @@ body { margin: 0; font-family: "Montserrat", sans-serif; }
     --option-text-color: #000000;
     --horizontal-line-color: #5c5c5c;
     --title-div-color: #fff;
+    --filled-input-background-color: #d9d9d9 !important; /* Dark background for filled input in dark mode */
+    --mdc-line-ripple-color: #0070ad; /* Common variable for the line ripple color */
+    --mdc-switch-selected-track-color: #fff; /* Default color */
+
   }
 
 .light-mode{
   --background-color: #ffffff;
   --text-color: #000000;
   --mat-stepper-header-color: #0070AD;
-  --mat-stepper-header-background: #e0e0e0;
+  --mat-stepper-header-background: #fff;
   --mat-stepper-content-background: #ffffff;
   --mat-stepper-content-color: #000000;
   --input-border-color: #0070AD;
   --floating-label-color: #000000;
+  --filled-input-background-color: #d9d9d9 !important; /* Dark background for filled input in dark mode */
+  --mdc-switch-selected-track-color: #fff; /* Light mode color */
+
 }  
   
 .dark-mode {
-    --background-color: #000000;
+    --background-color: #121212;
     --text-color: #ffffff;
     --mat-stepper-header-color: #fff;
-    --mat-stepper-header-background: #000000;
-    --mat-stepper-content-background: #000000;
+    --mat-stepper-header-background: #121212;
+    --mat-stepper-content-background: #121212;
     --mat-stepper-content-color: #ffffff;
     --input-border-color: #fff;
     --floating-label-color: #fff;
-    --filled-input-background-color: #424242; /* Dark background for filled input in dark mode */
+    --filled-input-background-color: #333333; /* Dark background for filled input in dark mode */
     --input-text-color: #fff; /* Red text color in dark mode */
     --select-panel-background-color: #333333;
     --select-panel-text-color: #ffffff;
-    --select-selected-item-color: #ff0000;
+    --select-selected-item-color: #011800;
     --select-value-color: #fff; 
-    --stepper-wrapper-background-color: #000000; /* Dark background for stepper wrapper in dark mode */
+    --stepper-wrapper-background-color: #121212; /* Dark background for stepper wrapper in dark mode */
     --active-step-label-color: #fff; /* Light active step label color in dark mode */
     --option-text-color: #fff; /* Red option text color in dark mode */
     --horizontal-line-color: #5c5c5c; /* White horizontal line in dark mode */
     --title-div-color: #000000; /* Black title div text color in dark mode */
+    --mdc-switch-selected-track-color: #ffffff; /* White track color in dark mode */
 }
   
 body {
@@ -124,3 +132,7 @@ body {
   .big-box .title-div {
     background-color: var(--title-div-color);
   }  
+
+  ::ng-deep .mat-mdc-slide-toggle .mdc-switch:enabled .mdc-switch__track::after {
+    background: var(--mdc-switch-selected-track-color) !important;
+  } 

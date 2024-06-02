@@ -169,3 +169,11 @@
 .mat-stepper-horizontal-line {
   border-color: var(--horizontal-line-color) !important;
 }
+
+::ng-deep .mdc-text-field--filled .mdc-line-ripple::after {
+  border-bottom-color: var(--mdc-line-ripple-color) !important;
+}
+
+::ng-deep .mat-mdc-slide-toggle .mdc-switch:enabled .mdc-switch__track::after {
+  background: var(--mdc-switch-selected-track-color) !important;
+}
