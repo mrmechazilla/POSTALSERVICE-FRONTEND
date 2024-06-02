@@ -19,7 +19,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentsComponent } from './components/components.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PackageCreationComponent } from './components/package-creation/package-creation.component';
 import { PackageTableComponent } from './components/package-table/package-table.component';
@@ -48,7 +47,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentsComponent,
     NavbarComponent,
     PackageCreationComponent,
     PackageTableComponent,
