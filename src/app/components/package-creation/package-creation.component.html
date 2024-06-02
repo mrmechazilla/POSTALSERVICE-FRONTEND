@@ -10,42 +10,57 @@
 
     <mat-step label="Client Information">
       <p>Client Information Details</p>
+
       <div class="form-fields">
-        <mat-form-field floatLabel="always">
-          <mat-label>First Name</mat-label>
-          <input matInput required class="custom-input">
-        </mat-form-field>
 
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">First Name</label>
         <mat-form-field floatLabel="always">
-          <mat-label>Last Name</mat-label>
           <input matInput required class="custom-input">
         </mat-form-field>
+        </div>
 
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Last Name</label>
         <mat-form-field floatLabel="always">
-          <mat-label>Card ID</mat-label>
           <input matInput required class="custom-input">
         </mat-form-field>
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Card ID</label>
+        <mat-form-field floatLabel="always">
+          <input matInput required class="custom-input">
+        </mat-form-field>
+        </div>
 
       </div>
 
       <div class="form-fields">
 
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Address</label>
         <mat-form-field floatLabel="always">
-          <mat-label>Address</mat-label>
           <input matInput required class="custom-input">
         </mat-form-field>
+        </div> 
+        
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Date Of Birth</label>
+          <mat-form-field floatLabel="always">
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker" style="color: #0070AD;"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+       
 
-        <mat-form-field floatLabel="always">
-          <mat-label>Date Of Birth</mat-label>
-          <input matInput [matDatepicker]="picker">
-          <mat-datepicker-toggle matSuffix [for]="picker" style="color: #0070AD;"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-
-        <mat-form-field floatLabel="always">
-          <mat-label>Other</mat-label>
-          <input matInput required class="custom-input">
-        </mat-form-field>
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Other</label>
+          <mat-form-field floatLabel="always">
+            <input matInput required class="custom-input">
+          </mat-form-field>
+        </div>
 
       </div>
 
@@ -60,44 +75,57 @@
       <p>Package Information Details</p>
 
       <div class="form-fields">
-        <mat-form-field floatLabel="always">
-          <mat-label>Package Weight</mat-label>
-          <input matInput required class="custom-input">
-        </mat-form-field>
 
-        <mat-form-field floatLabel="always">
-          <mat-label>Package Height</mat-label>
-          <input matInput required class="custom-input">
-        </mat-form-field>
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Package Weight</label>
+          <mat-form-field floatLabel="always">
+            <input matInput required class="custom-input">
+          </mat-form-field>
+        </div>
 
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Package Height</label>
+          <mat-form-field floatLabel="always">
+          <input matInput required class="custom-input">
+          </mat-form-field>
+        </div>
+
+
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Package Width</label>
         <mat-form-field floatLabel="always">
-          <mat-label>Package Width</mat-label>
           <input matInput required class="custom-input">
         </mat-form-field>
+        </div>
 
       </div>
 
       <div class="form-fields">
 
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Package Price</label>
         <mat-form-field floatLabel="always">
-          <mat-label>Package Price</mat-label>
           <input matInput required class="custom-input">
         </mat-form-field>
+        </div>
 
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Shipping Tier</label>
         <mat-form-field floatLabel="always">
-          <mat-label>Shipping Tier</mat-label>
           <mat-select required>
             <mat-option *ngFor="let shipping of shippings" [value]="shipping.value">
               {{shipping.viewValue}}
             </mat-option>
           </mat-select>
         </mat-form-field>
+        </div>
 
-
+        <div style="display: flex; flex-direction: column;">
+          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">Package Address</label>
         <mat-form-field floatLabel="always">
-          <mat-label>Shipping Address</mat-label>
           <input matInput required class="custom-input">
         </mat-form-field>
+        </div>
       </div>
       <div class="step-buttons">
         <button mat-button matStepperPrevious>Back</button>

@@ -75,7 +75,7 @@
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  //border-radius: 40px !important;
+  border-radius: 40px !important;
 }
 
 .step-buttons button:first-child {
@@ -94,6 +94,23 @@
 
 ::ng-deep .mat-mdc-form-field{
   width: 250px;
+}
+
+::ng-deep .mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after {
+  color: #ff0000;
+}
+
+::ng-deep .mat-mdc-select-arrow{
+  color: #0070AD;
+}
+
+::ng-deep .mat-mdc-form-field.mat-focused.mat-primary .mat-mdc-select-arrow{
+  color: #0070AD;
+}
+
+
+::ng-deep .mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after, .mat-primary .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after{
+  color: #0070AD;
 }
 
 // Disable header navigation for the stepper
@@ -176,4 +193,25 @@
 
 ::ng-deep .mat-mdc-slide-toggle .mdc-switch:enabled .mdc-switch__track::after {
   background: var(--mdc-switch-selected-track-color) !important;
+}
+
+.red-astrek::after {
+  content: " * ";
+  color: red;
+  font-weight: bold;
+  margin-left: 3px;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: var(--filled-input-background-color) !important;
+  height: 46px !important;
+  border-radius: 4px !important;
+}
+
+::ng-deep .mdc-line-ripple::before {
+  border-bottom-width: 0px !important;
+}
+
+::ng-deep .mat-mdc-form-field-focus-overlay {
+  border-radius: 0px !important;
 }

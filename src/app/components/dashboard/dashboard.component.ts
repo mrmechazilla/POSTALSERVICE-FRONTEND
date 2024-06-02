@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 
 @Component({
@@ -7,6 +7,9 @@ import { Chart } from 'chart.js/auto';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit{
+
+  private barChart: Chart | undefined;
+  private lineChart: Chart | undefined;
 
   constructor(){}
 
@@ -55,4 +58,13 @@ export class DashboardComponent implements OnInit{
     });
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    if (this.barChart) {
+      this.barChart.resize();
+    }
+    if (this.lineChart) {
+      this.lineChart.resize();
+    }
+  }
 }
