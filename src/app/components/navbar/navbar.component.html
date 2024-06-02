@@ -14,25 +14,29 @@
     <span class="spacer"></span>
     <span class="spacer"></span>
 
-    <!-- <span style="margin-right: 8px;">
-        <img src="assets\images\bar-icon.svg">
-    </span>
-    <span>
+    <!-- <span>
         <img src="assets\images\user.svg">
     </span> -->
-    <span style="margin-right: 10px;">
+    <span style="margin-right: 8px;">
         <mat-slide-toggle [(ngModel)]="darkMode" (change)="toggleTheme()"></mat-slide-toggle>
+    </span>
+
+    <span style="margin-right: 8px;">
+        <img src="assets\images\bar-icon.svg">
     </span>
 
     <select (change)="selectLang($event)" class="select-language">
         <option style="background-color: transparent; font-size: 15px; font-weight: bold; color: #0070AD;" *ngFor="let item of supportedLanguages"> {{item}} </option>
     </select>  
 
+    <span style="margin-right: 8px;">
+        <img src="assets\images\bar-icon.svg">
+    </span>
 
     <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
     </button> -->
-    <span style="margin-left: 8px; cursor: pointer;">
+    <span style="cursor: pointer;">
         <img src="assets\icons\account-icon.svg">
     </span>
     
