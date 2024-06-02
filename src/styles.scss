@@ -7,14 +7,14 @@ body { margin: 0; font-family: "Montserrat", sans-serif; }
 
 :root {
     --filled-input-background-color: #ffffff;
-    --input-text-color: #000000;
+    --input-text-color: #121212;
     --select-panel-background-color: #ffffff;
     --select-panel-text-color: #cf0000;
     --select-selected-item-color: #0070AD;
-    --select-value-color: #000000;
+    --select-value-color: #121212;
     --stepper-wrapper-background-color: #ffffff;
     --active-step-label-color: rgba(0, 0, 0, 0.87);
-    --option-text-color: #000000;
+    --option-text-color: #121212;
     --horizontal-line-color: #5c5c5c;
     --title-div-color: #fff;
     --filled-input-background-color: #d9d9d9 !important; /* Dark background for filled input in dark mode */
@@ -25,11 +25,11 @@ body { margin: 0; font-family: "Montserrat", sans-serif; }
 
 .light-mode{
   --background-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #121212;
   --mat-stepper-header-color: #0070AD;
   --mat-stepper-header-background: #fff;
   --mat-stepper-content-background: #ffffff;
-  --mat-stepper-content-color: #000000;
+  --mat-stepper-content-color: #121212;
   --input-border-color: #0070AD;
   --floating-label-color: #000000;
   --filled-input-background-color: #d9d9d9 !important; /* Dark background for filled input in dark mode */
@@ -56,7 +56,7 @@ body { margin: 0; font-family: "Montserrat", sans-serif; }
     --active-step-label-color: #fff; /* Light active step label color in dark mode */
     --option-text-color: #fff; /* Red option text color in dark mode */
     --horizontal-line-color: #5c5c5c; /* White horizontal line in dark mode */
-    --title-div-color: #000000; /* Black title div text color in dark mode */
+    --title-div-color: #121212; /* Black title div text color in dark mode */
     --mdc-switch-selected-track-color: #ffffff; /* White track color in dark mode */
 }
   
