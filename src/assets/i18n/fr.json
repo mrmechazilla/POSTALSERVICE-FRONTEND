@@ -11,7 +11,7 @@
             "CLIENT_INFORMATION": "Informations Client",
             "FIRST_NAME": "Prénom",
             "LAST_NAME": "Nom",
-            "CARD_ID": "Carte ID",
+            "CARD_ID": "Carte d'Identité",
             "DEPARTURE_ADDRESS": "Adresse De Départ",
             "DATE_OF_BIRTH": "Date De Naissance",
             "DESCRIPTION": "Description"
