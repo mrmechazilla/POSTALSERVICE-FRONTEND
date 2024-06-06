@@ -179,14 +179,6 @@
   background-color: var(--stepper-wrapper-background-color) !important;
 }
 
-.mat-step-header .mat-step-label.mat-step-label-active {
-  color: var(--active-step-label-color) !important;
-}
-
-.mat-stepper-horizontal-line {
-  border-color: var(--horizontal-line-color) !important;
-}
-
 ::ng-deep .mdc-text-field--filled .mdc-line-ripple::after {
   border-bottom-color: var(--mdc-line-ripple-color) !important;
 }

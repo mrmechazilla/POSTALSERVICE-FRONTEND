@@ -17,9 +17,9 @@ body { margin: 0; font-family: "Montserrat", sans-serif; }
     --option-text-color: #121212;
     --horizontal-line-color: #5c5c5c;
     --title-div-color: #fff;
-    --filled-input-background-color: #d9d9d9 !important; /* Dark background for filled input in dark mode */
-    --mdc-line-ripple-color: #0070ad; /* Common variable for the line ripple color */
-    --mdc-switch-selected-track-color: #fff; /* Default color */
+    --filled-input-background-color: #d9d9d9 !important; 
+    --mdc-line-ripple-color: #0070ad; 
+    --mdc-switch-selected-track-color: #fff;
 
   }
 
@@ -32,8 +32,8 @@ body { margin: 0; font-family: "Montserrat", sans-serif; }
   --mat-stepper-content-color: #121212;
   --input-border-color: #0070AD;
   --floating-label-color: #000000;
-  --filled-input-background-color: #d9d9d9 !important; /* Dark background for filled input in dark mode */
-  --mdc-switch-selected-track-color: #fff; /* Light mode color */
+  --filled-input-background-color: #d9d9d9 !important; 
+  --mdc-switch-selected-track-color: #fff; 
 
 }  
   
@@ -46,80 +46,24 @@ body { margin: 0; font-family: "Montserrat", sans-serif; }
     --mat-stepper-content-color: #ffffff;
     --input-border-color: #fff;
     --floating-label-color: #fff;
-    --filled-input-background-color: #333333; /* Dark background for filled input in dark mode */
-    --input-text-color: #fff; /* Red text color in dark mode */
+    --filled-input-background-color: #333333; 
+    --input-text-color: #fff; 
     --select-panel-background-color: #333333;
     --select-panel-text-color: #ffffff;
     --select-selected-item-color: #011800;
     --select-value-color: #fff; 
-    --stepper-wrapper-background-color: #121212; /* Dark background for stepper wrapper in dark mode */
-    --active-step-label-color: #fff; /* Light active step label color in dark mode */
-    --option-text-color: #fff; /* Red option text color in dark mode */
-    --horizontal-line-color: #5c5c5c; /* White horizontal line in dark mode */
-    --title-div-color: #121212; /* Black title div text color in dark mode */
-    --mdc-switch-selected-track-color: #ffffff; /* White track color in dark mode */
+    --stepper-wrapper-background-color: #121212;
+    --active-step-label-color: #fff;
+    --option-text-color: #fff;
+    --horizontal-line-color: #5c5c5c; 
+    --title-div-color: #121212;
+    --mdc-switch-selected-track-color: #ffffff;
 }
   
 body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
-  
-  .mat-step-header {
-    background-color: var(--mat-stepper-header-background) !important;
-    color: var(--mat-stepper-header-color) !important;
-  }
-  
-.mat-horizontal-content-container {
-    background-color: var(--mat-stepper-content-background) !important;
-    color: var(--mat-stepper-content-color) !important;
-}
-
-::ng-deep .mat-mdc-text-field-wrapper .mdc-text-field {
-    border-color: var(--input-border-color) !important;
-}
-  
-::ng-deep .mat-mdc-text-field-wrapper .mdc-text-field input {
-    color: var(--text-color) !important;
-}
-
-::ng-deep .mat-mdc-option .mdc-list-item__primary-text {
-    background-color: var(--mat-option-background-color) !important;
-    color: var(--option-text-color) !important;
-}
-  
-::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: var(--floating-label-color) !important;
-}
-
-::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-    background-color: var(--filled-input-background-color) !important;
-}
-
-::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
-    color: var(--input-text-color) !important;
-  }
-
-  ::ng-deep .cdk-overlay-pane:not(.mat-mdc-select-panel-above) .mdc-menu-surface.mat-mdc-select-panel {
-    background-color: var(--select-panel-background-color) !important;
-    color: var(--select-panel-text-color) !important;
-  }
-  
-  ::ng-deep .mat-mdc-option .mdc-list-item__primary-text {
-    color: var(--select-panel-text-color) !important;
-  }
-  
-  ::ng-deep .mat-mdc-option.mat-active {
-    color: var(--select-selected-item-color) !important;
-  }
-
-  ::ng-deep .mat-mdc-select-value {
-    color: var(--select-value-color) !important;
-  }  
- 
-  ::ng-deep .mat-horizontal-stepper-wrapper {
-    background-color: var(--stepper-wrapper-background-color) !important;
-  }
 
   .mat-step-header .mat-step-label.mat-step-label-active {
     color: var(--active-step-label-color) !important;
@@ -128,11 +72,3 @@ body {
   .mat-stepper-horizontal-line {
     border-color: var(--horizontal-line-color) !important;
   }
-
-  .big-box .title-div {
-    background-color: var(--title-div-color);
-  }  
-
-  ::ng-deep .mat-mdc-slide-toggle .mdc-switch:enabled .mdc-switch__track::after {
-    background: var(--mdc-switch-selected-track-color) !important;
-  } 

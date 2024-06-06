@@ -5,19 +5,19 @@
 
     <!-- Position Column -->
     <ng-container matColumnDef="client_name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Client Name </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'PACKAGE_LIST.TABLE.CLIENT_NAME' | translate }}  </th>
       <td mat-cell *matCellDef="let element"> {{element.client_name}} </td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="package_price">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Package Price </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'PACKAGE_LIST.TABLE.PACKAGE_PRICE' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.package_price}} </td>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="extraction_date">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Extraction Date </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'PACKAGE_LIST.TABLE.EXTRACTION_DATE' | translate }} </th>
       <td mat-cell *matCellDef="let element"> {{element.extraction_date | date:"yyyy-MM-dd"}} </td>
     </ng-container>
 
@@ -37,9 +37,9 @@
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>	
         <!-- <mat-icon style="margin-left: 10px;">control_point</mat-icon>  -->
       <td mat-cell *matCellDef="let row">
-          <mat-icon style="color:red; cursor: pointer;" (click)="openConfirmation()">delete</mat-icon>
           <mat-icon style="cursor: pointer;">edit</mat-icon>
           <mat-icon style="cursor: pointer;" (click)="openDetails()">description</mat-icon>
+          <mat-icon style="color:red; cursor: pointer;" (click)="openConfirmation()">delete</mat-icon>
           <!-- <mat-checkbox ></mat-checkbox> -->
       </td>
     </ng-container>
