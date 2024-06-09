@@ -8,6 +8,7 @@
   padding: 20px;
   background-color: var(--background-color);
   color: var(--text-color);
+  overflow-y: auto; /* Added to make the content scrollable */
 }
 
 .small-box {
@@ -39,15 +40,21 @@
   // text-decoration: underline;
 }
 
-
 .form-fields {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; /* Added for better form field structure */
+  font-family: 'Montserrat', sans-serif !important;
+}
+
 .custom-input::placeholder {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 .button-group {
@@ -62,11 +69,14 @@
 .step-buttons {
   display: flex;
   justify-content: flex-end;
-  margin-top: -80px;
+  flex-wrap: wrap; /* Added for responsiveness */
+  background-color: #1f1f1f; /* Dark background for the button container */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px; /* Auto height to fit the content */
+  height: auto;
 }
 
 .step-buttons button {
-  margin-top: 12%;
   margin-left: 10px;
   background-color: #0070AD;
   color: white;

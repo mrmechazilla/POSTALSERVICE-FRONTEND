@@ -17,6 +17,10 @@ export class PackageCreationComponent {
   shippings: Food[] = [
     {value: 'STANDARD-0', viewValue: 'STANDARD'},
     {value: 'PREMIUM-1', viewValue: 'PREMIUM'},
-    {value: 'VIP-2', viewValue: 'VIP'},
+    {value: 'VIP-2', viewValue: 'VIP'}, 
+    {value: 'VIP-2', viewValue: 'LUXIRY'}, 
+    {value: 'VIP-2', viewValue: 'ROYAL'}, 
+    {value: 'VIP-2', viewValue: 'FREE'}, 
+    {value: 'VIP-2', viewValue: 'ULTRA VIP'},
   ];
 }

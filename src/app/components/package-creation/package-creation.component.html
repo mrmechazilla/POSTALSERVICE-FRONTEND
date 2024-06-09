@@ -3,60 +3,57 @@
 </div>
 
 <div class="big-box">
-
   <mat-horizontal-stepper>
 
     <!-- first stepper -->
 
     <mat-step [label]="'SEND_PACKAGE.STEP_1.CLIENT_INFORMATION' | translate">
-      <p>Client Information Details</p>
+      <!-- <p>Client Information Details</p> -->
 
       <div class="form-fields">
-
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.FIRST_NAME' | translate }}</label>
-        <mat-form-field floatLabel="always">
-          <input matInput required class="custom-input">
-        </mat-form-field>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.FIRST_NAME' | translate }}</label>
+          <mat-form-field floatLabel="always">
+            <input matInput required class="custom-input">
+          </mat-form-field>
         </div>
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.LAST_NAME' | translate }}</label>
-        <mat-form-field floatLabel="always">
-          <input matInput required class="custom-input">
-        </mat-form-field>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.LAST_NAME' | translate }}</label>
+          <mat-form-field floatLabel="always">
+            <input matInput required class="custom-input">
+          </mat-form-field>
         </div>
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.CARD_ID' | translate }}</label>
-        <mat-form-field floatLabel="always">
-          <input matInput required class="custom-input">
-        </mat-form-field>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif;margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.CARD_ID' | translate }}</label>
+          <mat-form-field floatLabel="always">
+            <input matInput required class="custom-input">
+          </mat-form-field>
         </div>
-
       </div>
 
       <div class="form-fields">
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.DEPARTURE_ADDRESS' | translate }}</label>
-        <mat-form-field floatLabel="always">
-          <input matInput required class="custom-input">
-        </mat-form-field>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.DEPARTURE_ADDRESS' | translate }}</label>
+          <mat-form-field floatLabel="always">
+            <input matInput required class="custom-input">
+          </mat-form-field>
         </div> 
         
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.DATE_OF_BIRTH' | translate }}</label>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.DATE_OF_BIRTH' | translate }}</label>
           <mat-form-field floatLabel="always">
             <input matInput [matDatepicker]="picker">
-            <mat-datepicker-toggle matSuffix [for]="picker" style="color: #0070AD;"></mat-datepicker-toggle>
+            <mat-datepicker-toggle matSuffix [for]="picker" style="color: #fff;"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
         </div>
        
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.DESCRIPTION' | translate }}</label>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.DESCRIPTION' | translate }}</label>
           <mat-form-field floatLabel="always">
             <input matInput required class="custom-input">
           </mat-form-field>
@@ -72,27 +69,27 @@
     <!-- second stepper -->
 
     <mat-step [label]="'SEND_PACKAGE.STEP_2.PACKAGE_INFORMATION' | translate">
-      <p>Package Information Details</p>
+      <!-- <p>Package Information Details</p> -->
 
       <div class="form-fields">
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_WEIGHT' | translate }}</label>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_WEIGHT' | translate }}</label>
           <mat-form-field floatLabel="always">
             <input matInput required class="custom-input">
           </mat-form-field>
         </div>
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_HEIGHT' | translate }}</label>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_HEIGHT' | translate }}</label>
           <mat-form-field floatLabel="always">
           <input matInput required class="custom-input">
           </mat-form-field>
         </div>
 
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_WIDTH' | translate }}</label>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_WIDTH' | translate }}</label>
         <mat-form-field floatLabel="always">
           <input matInput required class="custom-input">
         </mat-form-field>
@@ -102,15 +99,15 @@
 
       <div class="form-fields">
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_PRICE' | translate }}</label>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_PRICE' | translate }}</label>
         <mat-form-field floatLabel="always">
           <input matInput required class="custom-input">
         </mat-form-field>
         </div>
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.SHIPPING_TIER' | translate }}</label>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.SHIPPING_TIER' | translate }}</label>
         <mat-form-field floatLabel="always">
           <mat-select required>
             <mat-option *ngFor="let shipping of shippings" [value]="shipping.value">
@@ -120,8 +117,8 @@
         </mat-form-field>
         </div>
 
-        <div style="display: flex; flex-direction: column;">
-          <label class="red-astrek" style="font-weight: 500; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.SHIPPING_ADDRESS' | translate }}</label>
+        <div class="form-group">
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.SHIPPING_ADDRESS' | translate }}</label>
         <mat-form-field floatLabel="always">
           <input matInput required class="custom-input">
         </mat-form-field>
@@ -133,11 +130,10 @@
       </div>
     </mat-step>
 
-
     <!-- third stepper -->
 
     <mat-step [label]="'SEND_PACKAGE.STEP_3.CONFIRM_EXTRACTION' | translate">
-      <p>Confirm Extraction Details</p>
+      <!-- <p>Confirm Extraction Details</p> -->
 
       <div class="row justify-content-around">
         <div style="height: 135px; width:300px; border:1px solid black; padding: 0px;">
@@ -180,12 +176,7 @@
             </tbody>
           </table>
         </div>
-
-
       </div>
-
-      
-
 
       <div class="step-buttons" style="padding-top:20px;">
         <button mat-button matStepperPrevious>Back</button>
@@ -195,7 +186,4 @@
     </mat-step>
 
   </mat-horizontal-stepper>
-
-
-
 </div>
