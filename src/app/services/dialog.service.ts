@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { PackageDetailsComponent } from '../components/dialogs/package-details/package-details.component';
 import { ConfirmDeletionComponent } from '../components/dialogs/confirm-deletion/confirm-deletion.component';
@@ -8,7 +8,7 @@ import { ConfirmDeletionComponent } from '../components/dialogs/confirm-deletion
 })
 export class DialogService {
 
-  constructor(private dialog: MatDialog) { }
+  private dialog: MatDialog = inject(MatDialog);
 
   openConfirmDialog(msg: string) {
     const dialogConfig = new MatDialogConfig();

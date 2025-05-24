@@ -1,5 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatDatepicker } from '@angular/material/datepicker';
+import { MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
+import { TranslateModule } from '@ngx-translate/core';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatStepperModule } from '@angular/material/stepper';
 
 interface Food {
   value: string;
@@ -7,9 +14,11 @@ interface Food {
 }
 
 @Component({
-  selector: 'app-package-creation',
-  templateUrl: './package-creation.component.html',
-  styleUrls: ['./package-creation.component.scss']
+    selector: 'app-package-creation',
+    templateUrl: './package-creation.component.html',
+    styleUrls: ['./package-creation.component.scss'],
+    standalone: true,
+    imports: [MatStepperModule, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatButtonModule, MatSelectModule, MatOptionModule, TranslateModule]
 })
 export class PackageCreationComponent {
   @ViewChild('picker')

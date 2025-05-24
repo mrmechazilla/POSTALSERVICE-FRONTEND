@@ -1,10 +1,12 @@
 import { DatePipe } from '@angular/common';
 import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import { DomSanitizer } from '@angular/platform-browser';
+import { MatTable, MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { DialogService } from 'src/app/services/dialog.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { MatIconModule } from '@angular/material/icon';
+import { SearchComponent } from '../search/search.component';
 
 export interface PeriodicElement {
   name: number;
@@ -14,9 +16,11 @@ export interface PeriodicElement {
   address: string;
 }
 @Component({
-  selector: 'app-package-table',
-  templateUrl: './package-table.component.html',
-  styleUrls: ['./package-table.component.scss']
+    selector: 'app-package-table',
+    templateUrl: './package-table.component.html',
+    styleUrls: ['./package-table.component.scss'],
+    standalone: true,
+    imports: [SearchComponent, MatTable, MatIconModule, MatPaginatorModule, DatePipe, TranslateModule]
 })
 export class PackageTableComponent implements OnInit, AfterViewInit{
   public packages:any;
