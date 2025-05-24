@@ -40,8 +40,8 @@
           <mat-form-field floatLabel="always">
             <input matInput required class="custom-input">
           </mat-form-field>
-        </div> 
-        
+        </div>
+
         <div class="form-group">
           <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;"> DATE_OF_BIRTH <!-- {{ 'SEND_PACKAGE.STEP_1.DATE_OF_BIRTH' | translate }} --> </label>
           <mat-form-field floatLabel="always">
@@ -50,7 +50,7 @@
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
         </div>
-       
+
 
         <div class="form-group">
           <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;"> DESCRIPTION <!-- {{ 'SEND_PACKAGE.STEP_1.DESCRIPTION' | translate }} --></label>
@@ -83,16 +83,16 @@
         <div class="form-group">
           <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_HEIGHT' | translate }}</label>
           <mat-form-field floatLabel="always">
-          <input matInput required class="custom-input">
+            <input matInput required class="custom-input">
           </mat-form-field>
         </div>
 
 
         <div class="form-group">
           <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_WIDTH' | translate }}</label>
-        <mat-form-field floatLabel="always">
-          <input matInput required class="custom-input">
-        </mat-form-field>
+          <mat-form-field floatLabel="always">
+            <input matInput required class="custom-input">
+          </mat-form-field>
         </div>
 
       </div>
@@ -101,27 +101,29 @@
 
         <div class="form-group">
           <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.PACKAGE_PRICE' | translate }}</label>
-        <mat-form-field floatLabel="always">
-          <input matInput required class="custom-input">
-        </mat-form-field>
+          <mat-form-field floatLabel="always">
+            <input matInput required class="custom-input">
+          </mat-form-field>
         </div>
 
         <div class="form-group">
           <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.SHIPPING_TIER' | translate }}</label>
-        <mat-form-field floatLabel="always">
-          <mat-select required>
-            <mat-option *ngFor="let shipping of shippings" [value]="shipping.value">
-              {{shipping.viewValue}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+          <mat-form-field floatLabel="always">
+            <mat-select required>
+              @for (shipping of shippings; track shipping) {
+                <mat-option [value]="shipping.value">
+                  {{shipping.viewValue}}
+                </mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
         </div>
 
         <div class="form-group">
           <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_2.SHIPPING_ADDRESS' | translate }}</label>
-        <mat-form-field floatLabel="always">
-          <input matInput required class="custom-input">
-        </mat-form-field>
+          <mat-form-field floatLabel="always">
+            <input matInput required class="custom-input">
+          </mat-form-field>
         </div>
       </div>
       <div class="step-buttons">
@@ -145,11 +147,11 @@
             </thead>
             <tbody>
               <tr>
-                <td scope="col" style="font-family:'Montserrat', sans-serif;"> 
-                  {{'SEND_PACKAGE.STEP_1.FIRST_NAME' | translate}}: <br> 
-                  {{'SEND_PACKAGE.STEP_1.LAST_NAME' | translate}}: <br> 
-                  {{ 'SEND_PACKAGE.STEP_1.CARD_ID' | translate }}: <br> 
-                  {{ 'SEND_PACKAGE.STEP_1.DEPARTURE_ADDRESS' | translate }}: 
+                <td scope="col" style="font-family:'Montserrat', sans-serif;">
+                  {{'SEND_PACKAGE.STEP_1.FIRST_NAME' | translate}}: <br>
+                  {{'SEND_PACKAGE.STEP_1.LAST_NAME' | translate}}: <br>
+                  {{ 'SEND_PACKAGE.STEP_1.CARD_ID' | translate }}: <br>
+                  {{ 'SEND_PACKAGE.STEP_1.DEPARTURE_ADDRESS' | translate }}:
                 </td>
               </tr>
             </tbody>
@@ -161,16 +163,16 @@
             <thead>
               <tr>
                 <th scope="col" style="background-color:#0070AD; color: white; font-family:'Montserrat', sans-serif;" >
-                  {{ 'SEND_PACKAGE.STEP_2.PACKAGE_INFORMATION' | translate }}</th>
+                {{ 'SEND_PACKAGE.STEP_2.PACKAGE_INFORMATION' | translate }}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td scope="col" style="font-family:'Montserrat', sans-serif;"> 
-                  {{ 'SEND_PACKAGE.STEP_2.PACKAGE_WEIGHT' | translate }}: <br> 
-                  {{ 'SEND_PACKAGE.STEP_2.PACKAGE_PRICE' | translate }}: <br> 
-                  {{ 'SEND_PACKAGE.STEP_2.SHIPPING_TIER' | translate }}: <br> 
-                  {{ 'SEND_PACKAGE.STEP_2.SHIPPING_ADDRESS' | translate }}: 
+                <td scope="col" style="font-family:'Montserrat', sans-serif;">
+                  {{ 'SEND_PACKAGE.STEP_2.PACKAGE_WEIGHT' | translate }}: <br>
+                  {{ 'SEND_PACKAGE.STEP_2.PACKAGE_PRICE' | translate }}: <br>
+                  {{ 'SEND_PACKAGE.STEP_2.SHIPPING_TIER' | translate }}: <br>
+                  {{ 'SEND_PACKAGE.STEP_2.SHIPPING_ADDRESS' | translate }}:
                 </td>
               </tr>
             </tbody>

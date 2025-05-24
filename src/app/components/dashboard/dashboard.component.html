@@ -1,15 +1,17 @@
 <div class="big-box">
-    <span class="title-div">Global Query System</span>
-    <div class="charts-container">
-      <div class="chart-box">
-        <canvas id="line-chart"></canvas>
-      </div>
-      <div class="chart-box">
-        <canvas id="bar-chart"></canvas>
-      </div>
+  <span class="title-div">Global Query System</span>
+  <div class="charts-container">
+    <div class="chart-box">
+      <canvas id="line-chart"></canvas>
+    </div>
+    <div class="chart-box">
+      <canvas id="bar-chart"></canvas>
     </div>
   </div>
+</div>
 <!-- <lib-postal></lib-postal> -->
- <div style="display: flex; justify-content: center; align-items: center; height: 35px;">
-  <mat-spinner *ngIf="loading" diameter="25"></mat-spinner>
+<div style="display: flex; justify-content: center; align-items: center; height: 35px;">
+  @if (loading) {
+    <mat-spinner diameter="25"></mat-spinner>
+  }
 </div>
