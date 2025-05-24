@@ -7,9 +7,11 @@ import { Chart } from 'chart.js/auto';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit{
-
+  loading = true;
   private barChart: Chart | undefined;
+  name = 'theUser'; 
   private lineChart: Chart | undefined;
+  data: any;
 
   constructor(){}
 

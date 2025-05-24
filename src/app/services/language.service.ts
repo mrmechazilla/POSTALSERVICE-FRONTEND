@@ -1,11 +1,16 @@
-import { Injectable } from '@angular/core';
+/* import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
+import { Language } from '../dtos/language';
 
 @Injectable({
     providedIn: 'root'
   })
   export class LanguageService {
+    supportedLanguages: Language[] = [
+      {code: "en", label: "english"}, 
+      {code: "fr", label: "french"},
+      {code: "ar", label: "arabic"}
+    ];
     private defaultLang: string = 'en';
     private storageKey: string = 'selectedLanguage';
 
@@ -21,6 +26,10 @@ import { TranslateService } from '@ngx-translate/core';
     setLanguage(lang: string) {
       this.translate.use(lang);
       localStorage.setItem(this.storageKey, lang);
+    
+      // Set the text direction based on language
+      const htmlTag = document.documentElement;
+      htmlTag.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
     }
   
     getSavedLanguage(): string | null {
@@ -31,4 +40,4 @@ import { TranslateService } from '@ngx-translate/core';
       return this.getSavedLanguage() || this.defaultLang;
     }
   
-  }
+  } */

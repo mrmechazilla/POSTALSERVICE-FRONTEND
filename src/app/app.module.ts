@@ -16,6 +16,8 @@ import { MatExpansionModule} from '@angular/material/expansion';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCheckboxModule} from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +36,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ThemeService } from './services/theme.service';
 import { FormsModule } from '@angular/forms';
+import { BidiModule } from '@angular/cdk/bidi';
 //import { PostalComponent, PostalModule } from 'postal';
 
 
@@ -75,8 +78,11 @@ const appRoutes: Routes = [
     MatExpansionModule,
     MatPaginatorModule,
     MatDialogModule,
+    MatProgressSpinnerModule,
+    MatMenuModule,
     FormsModule,
     HttpClientModule,
+    BidiModule,
     //PostalModule,
     RouterModule.forRoot(appRoutes),
     TranslateModule.forRoot({

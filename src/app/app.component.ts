@@ -8,7 +8,6 @@ import { ThemeService } from './services/theme.service';
 })
 export class AppComponent implements OnInit {
   darkMode = true;
-
   constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {

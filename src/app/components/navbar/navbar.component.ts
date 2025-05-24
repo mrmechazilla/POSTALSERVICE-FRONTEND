@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanguageService } from 'src/app/services/language.service';
+//import { LanguageService } from 'src/app/services/language.service';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -8,14 +8,15 @@ import { ThemeService } from 'src/app/services/theme.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit{
+  accountITems: string[] = ['Profile', 'Settings', 'Logout'];
   supportedLanguages: string[] = ['en', 'fr', 'ar'];
   currentLanguage!: string;
   darkMode = true;
 
-  constructor(private languageService: LanguageService, private themeService: ThemeService){}
+  constructor(/*private languageService: LanguageService,*/ private themeService: ThemeService){}
 
   ngOnInit() {
-    this.currentLanguage = this.languageService.getCurrentLanguage();
+    //this.currentLanguage = this.languageService.getCurrentLanguage();
     this.darkMode = this.themeService.isDarkMode();
   }
 
@@ -25,6 +26,8 @@ export class NavbarComponent implements OnInit{
   }
 
   selectLang(event: any) {
-    this.languageService.setLanguage(event.target.value);
+    //this.languageService.setLanguage(event.target.value);
   }
+
+  selectAction(event: any){}
 }

@@ -1,0 +1,79 @@
+{
+    "NAVBAR": {
+      "SEND_PACKAGE": "إرسال الطرد",
+      "PACKAGE_LIST": "قائمة الطرود",
+      "DASHBOARD": "لوحة التحكم",
+      "SIGN_OUT": "تسجيل الخروج"
+    },
+    "SEND_PACKAGE": {
+      "TITLE": "إرسال طرد جديد",
+      "STEP_1": {
+        "CLIENT_INFORMATION": "معلومات العميل",
+        "FIRST_NAME": "الاسم الأول",
+        "LAST_NAME": "الاسم الأخير",
+        "CARD_ID": "رقم الهوية",
+        "DEPARTURE_ADDRESS": "عنوان الانطلاق",
+        "DATE_OF_BIRTH": "تاريخ الميلاد",
+        "DESCRIPTION": "الوصف"
+      },
+      "STEP_2": {
+        "PACKAGE_INFORMATION": "معلومات الطرد",
+        "PACKAGE_WEIGHT": "وزن الطرد",
+        "PACKAGE_HEIGHT": "ارتفاع الطرد",
+        "PACKAGE_WIDTH": "عرض الطرد",
+        "PACKAGE_PRICE": "سعر الطرد",
+        "SHIPPING_TIER": "فئة الشحن",
+        "SHIPPING_ADDRESS": "عنوان الشحن"
+      },
+      "STEP_3": {
+        "CONFIRM_EXTRACTION": "تأكيد الاستخراج",
+        "FIRST_NAME": "الاسم الأول",
+        "LAST_NAME": "الاسم الأخير",
+        "CARD_ID": "رقم الهوية",
+        "DEPARTURE_ADDRESS": "عنوان الانطلاق",
+        "PACKAGE_WEIGHT": "وزن الطرد",
+        "PACKAGE_PRICE": "سعر الطرد",
+        "SHIPPING_TIER": "فئة الشحن",
+        "SHIPPING_ADDRESS": "عنوان الشحن",
+        "SUCCESS_MESSAGE": "تم إرسال الطرد بنجاح."
+      }
+    },
+    "PACKAGE_LIST": {
+      "SEARCH": "البحث بالكلمة المفتاحية",
+      "TABLE": {
+        "CLIENT_NAME": "اسم العميل",
+        "PACKAGE_PRICE": "سعر الطرد",
+        "EXTRACTION_DATE": "تاريخ الاستخراج",
+        "SHIPPING_TIER": "فئة الشحن",
+        "SHIPPING_ADDRESS": "عنوان الشحن",
+        "ACTIONS": "الإجراءات",
+        "CURRENCY": "$"
+      },
+      "ACTIONS": {
+        "DELETE": {
+          "CONFIRMATION_QUESTION": "هل أنت متأكد أنك تريد حذف هذا الطرد؟",
+          "YES": "نعم",
+          "CANCEL": "إلغاء"
+        },
+        "DETAILS": {
+          "TITLE": "تفاصيل الطرد",
+          "CLIENT_INFORMATION": "معلومات العميل",
+          "FIRST_NAME": "الاسم الأول",
+          "LAST_NAME": "الاسم الأخير",
+          "CARD_ID": "رقم الهوية",
+          "EXTRACTION_DATE": "تاريخ الاستخراج",
+          "PACKAGE_INFORMATION": "معلومات الطرد",
+          "PACKAGE_ID": "معرف الطرد",
+          "PACKAGE_WEIGHT": "وزن الطرد",
+          "PACKAGE_PRICE": "سعر الطرد",
+          "SHIPPING_TIER": "فئة الشحن",
+          "SHIPPING_ADDRESS": "عنوان الشحن",
+          "DOWNLOAD_INVOICE": "تحميل الفاتورة"
+        }
+      }
+    },
+    "DASHBOARD": {
+      "TITLE": "لوحة تحكم التطبيق"
+    }
+  }
+  

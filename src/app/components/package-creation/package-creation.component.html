@@ -1,5 +1,5 @@
 <div class="small-box">
-  <p style="text-align:center; color:white; margin-top:-9px;"> {{ 'SEND_PACKAGE.TITLE' | translate }}</p>
+  <p style="text-align:center; color:white; margin-top:-9px;"> TITLE <!-- {{ 'SEND_PACKAGE.TITLE' | translate }} --></p>
 </div>
 
 <div class="big-box">
@@ -12,21 +12,21 @@
 
       <div class="form-fields">
         <div class="form-group">
-          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.FIRST_NAME' | translate }}</label>
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;"> FIRST_NAME <!-- {{ 'SEND_PACKAGE.STEP_1.FIRST_NAME' | translate }} --></label>
           <mat-form-field floatLabel="always">
             <input matInput required class="custom-input">
           </mat-form-field>
         </div>
 
         <div class="form-group">
-          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.LAST_NAME' | translate }}</label>
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;"> LAST_NAME <!-- {{ 'SEND_PACKAGE.STEP_1.LAST_NAME' | translate }} --> </label>
           <mat-form-field floatLabel="always">
             <input matInput required class="custom-input">
           </mat-form-field>
         </div>
 
         <div class="form-group">
-          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif;margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.CARD_ID' | translate }}</label>
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif;margin-bottom: 4px;"> CARD_ID <!-- {{ 'SEND_PACKAGE.STEP_1.CARD_ID' | translate }} --></label>
           <mat-form-field floatLabel="always">
             <input matInput required class="custom-input">
           </mat-form-field>
@@ -36,14 +36,14 @@
       <div class="form-fields">
 
         <div class="form-group">
-          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.DEPARTURE_ADDRESS' | translate }}</label>
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;"> DEPARTURE_ADDRESS <!-- {{ 'SEND_PACKAGE.STEP_1.DEPARTURE_ADDRESS' | translate }} --></label>
           <mat-form-field floatLabel="always">
             <input matInput required class="custom-input">
           </mat-form-field>
         </div> 
         
         <div class="form-group">
-          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.DATE_OF_BIRTH' | translate }}</label>
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;"> DATE_OF_BIRTH <!-- {{ 'SEND_PACKAGE.STEP_1.DATE_OF_BIRTH' | translate }} --> </label>
           <mat-form-field floatLabel="always">
             <input matInput [matDatepicker]="picker">
             <mat-datepicker-toggle matSuffix [for]="picker" style="color: #fff;"></mat-datepicker-toggle>
@@ -53,7 +53,7 @@
        
 
         <div class="form-group">
-          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;">{{ 'SEND_PACKAGE.STEP_1.DESCRIPTION' | translate }}</label>
+          <label class="red-astrek" style="font-weight: bold; font-size: 14px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px;"> DESCRIPTION <!-- {{ 'SEND_PACKAGE.STEP_1.DESCRIPTION' | translate }} --></label>
           <mat-form-field floatLabel="always">
             <input matInput required class="custom-input">
           </mat-form-field>
@@ -181,7 +181,7 @@
       <div class="step-buttons" style="padding-top:20px;">
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button>Submit</button>
-        <button mat-button>Download</button>
+        <button mat-button (click)="downloadUserGuide()">Download</button>
       </div>
     </mat-step>
 

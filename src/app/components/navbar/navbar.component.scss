@@ -69,3 +69,11 @@
     --mdc-switch-selected-focus-handle-color: #0070ad !important;
     --mdc-switch-selected-focus-state-layer-color: #fff !important;
 }    
+
+
+::ng-deep .mat-mdc-menu-content {
+    margin: 0;
+    padding: 0px 4px;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif !important;
+}

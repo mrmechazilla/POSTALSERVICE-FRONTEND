@@ -23,4 +23,14 @@ export class PackageCreationComponent {
     {value: 'VIP-2', viewValue: 'FREE'}, 
     {value: 'VIP-2', viewValue: 'ULTRA VIP'},
   ];
+
+  downloadUserGuide() {
+    const link = document.createElement('a');
+    link.href = 'https://uat.www.orange-business.com/system/files/2023-11/myservicespace_quickstartguide_november2023_0.pdf'; // Remote PDF URL
+    link.download = 'UserGuide.pdf'; // Set the desired download name
+    link.target = '_blank'; // Open in a new tab (optional for better user experience)
+    link.click();
+  }
+  
+  
 }
